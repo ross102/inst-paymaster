@@ -1,25 +1,23 @@
 import ActiveNav from "./activeNav";
-import {
-  ActivePaymasterFirstSection,
-  AllPaymasters,
-  Footer,
-  Loadmore,
-  Singlelist,
-} from "..";
+import Firstsection from "./firstSection";
+import AllPaymasters from "./allpaymasters";
+import Loadmore from "./loadmore";
+//import { Footer } from "..";
 
+/*  components are stacked and then exported
+ *   to page route pages/{auth_id}/activepaymaster
+ */
 const ActivePaymaster = () => {
   return (
-    <div className="container scaleto100 xl:px-20 mx-auto  min-h-(65vh)">
+    <div className="container scaleto100 px-1 mx-auto  min-h-(65vh)">
       <ActiveNav />
 
       <div className="container w-[934px] mx-auto my-0">
-        <ActivePaymasterFirstSection />
+        <Firstsection />
         <AllPaymasters />
-        <Singlelist />
-        <Singlelist />
         <Loadmore />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

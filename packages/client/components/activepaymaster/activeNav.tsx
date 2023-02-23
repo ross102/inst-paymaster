@@ -1,10 +1,13 @@
 import { Image } from "..";
 
+/* Navbar for paymaster's list page */
+
 function Paynav() {
   return (
     <nav className="active-paymaster-nav">
       <a href="/" className="paylogo">
         <Image
+          data-testid="logo"
           src="/assets/pm-images/logo.png"
           blurDataURL="/assets/pm-images/logo.png"
           alt="paymaster logo"
@@ -15,7 +18,7 @@ function Paynav() {
       </a>
 
       <ul className="list-ul">
-        <li>
+        <li data-testid="list-items">
           {/* <a href="#" className="mx-1 py-1">
             Docs
           </a> */}
@@ -35,9 +38,9 @@ function Paynav() {
             </select>
           </div>
         </li>
-        <li>
-          <button className="px-1  pm-0 py-1 w-30 sm:w-40  sm:h-9 bg-purple-600 rounded-md">
-            Create Paymaster
+        <li data-testid="list-items">
+          <button className="p-2  pm-0  w-30 sm:w-40 sm:after:content-['_Paymaster']  sm:h-9 bg-purple-600 rounded-md">
+            Create
           </button>
         </li>
       </ul>

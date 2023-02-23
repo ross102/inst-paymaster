@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:ital,wght@0,400;0,600;1,300;1,500&family=Open+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import "./navbar.css";
-@import "./landing/sections.css";
-@import "./landing/responsive.css";
-
-@import "./activepaymaster/sections.css";
-@import "./activepaymaster/mobile.css";
+@import "./landing/landingpage.css";
 
 * {
   @apply p-0 m-0 box-border outline-0;
@@ -17,24 +13,17 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  color: theme(fontFamily[color]);
-  font-family: theme(fontFamily[monserrat]), sans-serif;
-  background: theme(colors[backgroundTheme]);
-}
-
-@layer components {
-  .main {
-    max-width: theme(mainContainer[maxWidth]);
-    margin: theme(mainContainer[center]);
-  }
-}
-
-.main-container {
-  @apply main;
+  @apply bg-paymasters-dark text-white;
 }
 
 a {
   @apply no-underline;
 }
+
+/*************scaling 100 to 125***********************/
+
+/* @media (min-width: 1100px) and (-webkit-min-device-pixel-ratio: 1.25) {
+  .scaleto100 {
+    @apply px-20;
+  }
+} */
